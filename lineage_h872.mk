@@ -1,5 +1,5 @@
 #
-# Copyright 2017 The LineageOS Project
+# Copyright 2017-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,6 +24,10 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from h872 device
 $(call inherit-product, device/lge/h872/device.mk)
 
+# Security patch level
+PLATFORM_SECURITY_PATCH_OVERRIDE := 2018-10-01
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH_OVERRIDE)
+
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := h872
 PRODUCT_NAME := lineage_h872
@@ -35,6 +39,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="lucye" \
     PRODUCT_DEVICE="lucye" \
     PRODUCT_NAME="lucye_tmo_us" \
-    PRIVATE_BUILD_DESC="lucye_tmo_us-user 8.0.0 OPR1.170623.032 183621644ce05 release-keys"
+    PRIVATE_BUILD_DESC="lucye_tmo_us-user 8.0.0 OPR1.170623.032 182841114a294 release-keys"
 
-BUILD_FINGERPRINT := "lge/lucye_tmo_us/lucye:8.0.0/OPR1.170623.032/183621644ce05:user/release-keys"
+BUILD_FINGERPRINT := "lge/lucye_tmo_us/lucye:8.0.0/OPR1.170623.032/182841114a294:user/release-keys"
